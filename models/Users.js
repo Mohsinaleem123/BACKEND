@@ -8,6 +8,6 @@ const UserSchema = new mongoose.Schema({
   isngo: { type: Number, default: 0 }
 });
 
-const Users= mongoose.model('Users', UserSchema);
+const Users= mongoose.model('Users', UserSchema,'Users');
 
 module.exports = Users;
