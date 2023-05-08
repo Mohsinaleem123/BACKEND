@@ -87,8 +87,9 @@ app.use((req, res, next) => {
 });
 
 app.get("/",(req,res) =>{
-    console.log('hi');
-})
+    // console.log('hi');
+    res.json({message: "Hello, World!"})
+});
 // Use API routes
 app.use('/api/posts', PostRoutes);
 app.use('/api/user', UserRoutes);
