@@ -17,37 +17,31 @@ const PostSchema = new mongoose.Schema({
       required: true
     },
     description: {
-      type: String,
-      required: true
+      type: String
     },
     title: {
-      type: String,
-      required: true
+      type: String
     },
     long: {
-      type: Number,
-      required: true
+      type: Number
     },
     lat: {
-      type: Number,
-      required: true
+      type: Number
     },
     nid: {
-      type: String,
-      required: true
+      type: String
     },
     nname: {
-      type: String,
-      required: true
+      type: String
     },
     nnumber: {
-      type: String,
-      required: true
+      type: String
     },
     accepted: {
-      type: Number,
-      required: true
-    }
+      type: Number
+    }, imageFilePath: {
+      type: String
+    } // Save the image file path along with the other fields
   });
   const Posts = mongoose.model('Posts', PostSchema,'Posts');
   

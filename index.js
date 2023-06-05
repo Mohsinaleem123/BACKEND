@@ -69,6 +69,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
   //connectToDatabase();
 const PostRoutes = require('./Routes/PostRoutes');
 const UserRoutes = require('./Routes/UserRoutes');
+const RiderRoutes =require('./Routes/RiderRoutes');
+const OrganizationRoutes =require('./Routes/OrganizationRoutes');
 
 // Configure middleware to parse JSON and handle CORS
 app.use(bodyParser.json());
@@ -93,6 +95,8 @@ app.get("/",(req,res) =>{
 // Use API routes
 app.use('/api/posts', PostRoutes);
 app.use('/api/user', UserRoutes);
+app.use('/api/Rider', RiderRoutes);
+app.use('/api/Organization', OrganizationRoutes);
 
 // Start server
 const port = process.env.PORT || 3000;
